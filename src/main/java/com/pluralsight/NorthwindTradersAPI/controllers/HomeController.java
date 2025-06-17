@@ -1,4 +1,4 @@
-package com.pluralsight.NorthwindTradersAPI;
+package com.pluralsight.NorthwindTradersAPI.controllers;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -10,9 +10,9 @@ public class HomeController {
     @GetMapping("/")
     public String home(@RequestParam(required = false) String country) {
         if (country != null && !country.isEmpty()) {
-            return "Hello " + country;
+            return "Hellos " + country;
         } else {
-            return "Hello World";
+            return "Hellos World";
         }
     }
 }
